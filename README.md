@@ -10,10 +10,27 @@ An enterprise-grade software development kit engineered to map decentralized ide
 
 ## Installation
 
+### Prerequisites
+- Node.js >= 18.0.0
+- npm >= 9.0.0 (or yarn >= 1.22.0 / pnpm >= 8.0.0)
+
+### Package Deployment
+Execute the targeted acquisition command matching your production environment package manager setup:
+
 ```bash
+# Using Node Package Manager (Default)
 npm install @0xward/aetheros-core
+
+# Using Yarn Package Manager
+yarn add @0xward/aetheros-core
+
+# Using PNPM Package Manager
+pnpm add @0xward/aetheros-core
 ```
 
+### Peer Dependencies
+For secure runtime cryptographic executions and ledger state mutations, ensure your runtime container establishes communication boundaries with the primary network bindings if processing on-chain blocks:
+- For Stacks L2 layers: @stacks/transactions (>= 6.x) and @stacks/network for secure Clarity function calling.
 ---
 
 ## Core Capabilities
