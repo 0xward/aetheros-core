@@ -1,7 +1,7 @@
 {
   "name": "@0xward/aetheros-core",
-  "version": "1.0.0",
-  "description": "Core SDK configuration layers for AetherOS node structures.",
+  "version": "1.0.2",
+  "description": "Elite network intelligence platform designed on the Stacks blockchain using Groq + Bitcoin security.",
   "main": "index.js",
   "keywords": [
     "0xward",
@@ -12,5 +12,13 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xward/aetheros-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0xward/aetheros-core/issues"
+  },
+  "homepage": "https://github.com/0xward/aetheros-core#readme"
 }
