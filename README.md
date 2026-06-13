@@ -1,6 +1,8 @@
 # @0xward/aetheros-core
 
-AetherOS is an elite network intelligence platform designed for strategic professional networking. Powered by Groq AI and anchored to the Stacks blockchain, it provides tactical consultant layers secured by Bitcoin-level finality.
+![NPM Version](https://img.shields.io/npm/v/@0xward/aetheros-core) ![NPM Downloads](https://img.shields.io/npm/dm/@0xward/aetheros-core) ![License](https://img.shields.io/npm/l/@0xward/aetheros-core)
+
+AetherOS is an elite network intelligence platform designed for strategic professional networking on Stacks.
 
 ## Features
 - **Strategic Relationship Routing:** Constructs high-value network trees analytically.
