@@ -10,7 +10,35 @@
   <a href="https://www.npmjs.com/package/@0xward/aetheros-core"><img src="https://img.shields.io/npm/l/@0xward/aetheros-core?style=flat-square" alt="License" /></a>
 </p>
 
-AetherOS Stacks Network Intelligence SDK—core computational logic for decentralized intelligence frameworks built on STACKS ecosystems.
+An enterprise-grade software development kit engineered to map decentralized identity relational graphs and manage network intelligence tasks directly linked to Clarity smart contracts on the Stacks blockchain.
+
+---
+
+## Installation
+
+### Prerequisites
+- Node.js >= 18.0.0
+- npm >= 9.0.0 (or yarn >= 1.22.0 / pnpm >= 8.0.0)
+
+### Package Deployment
+Execute the targeted acquisition command matching your production environment package manager setup:
+
+```bash
+# Using Node Package Manager (Default)
+npm install @0xward/aetheros-core
+
+# Using Yarn Package Manager
+yarn add @0xward/aetheros-core
+
+# Using PNPM Package Manager
+pnpm add @0xward/aetheros-core
+```
+
+### Peer Dependencies
+For secure runtime cryptographic executions and ledger state mutations, ensure your runtime container establishes communication boundaries with the primary network bindings if processing on-chain blocks:
+- For Stacks L2 layers: @stacks/transactions (>= 6.x) and @stacks/network for secure Clarity function calling.
+
+---
 
 ## Core Capabilities
 
@@ -30,7 +58,6 @@ async function execute() {
     const analysis = await node.queryIntelligence("Verify L2 block integrity parameters");
     console.log("Analysis Output:", analysis);
 }
-
 execute();
 ```
 
