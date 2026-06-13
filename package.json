@@ -1,0 +1,16 @@
+{
+  "name": "@0xward/aetheros-core",
+  "version": "1.0.0",
+  "description": "Core SDK configuration layers for AetherOS node structures.",
+  "main": "index.js",
+  "keywords": [
+    "0xward",
+    "web3",
+    "utility"
+  ],
+  "author": "0xward",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
