@@ -1,6 +1,6 @@
 {
   "name": "@0xward/aetheros-core",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Elite network intelligence platform designed on the Stacks blockchain using Groq + Bitcoin security.",
   "main": "index.js",
   "keywords": [
@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/0xward/aetheros-core/issues"
   },
-  "homepage": "https://www.npmjs.com/package/@0xward/aetheros-core#readme"
+  "homepage": "https://www.npmjs.com/package/@0xward/aetheros-core#readme",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ]
 }
