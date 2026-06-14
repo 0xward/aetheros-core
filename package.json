@@ -1,6 +1,6 @@
 {
   "name": "@0xward/aetheros-core",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Elite network intelligence platform designed on the Stacks blockchain using Groq + Bitcoin security.",
   "main": "index.js",
   "keywords": [
