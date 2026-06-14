@@ -1,13 +1,9 @@
 <p align="center">
-  <img src="./assets/header-sync.svg" alt="0xward Core Intelligence Sync Animation" width="120" height="120" />
 </p>
 
 # @0xward/aetheros-core
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@0xward/aetheros-core"><img src="https://img.shields.io/npm/v/@0xward/aetheros-core?style=flat-square" alt="NPM Version" /></a>
-  <a href="https://www.npmjs.com/package/@0xward/aetheros-core"><img src="https://img.shields.io/npm/dm/@0xward/aetheros-core?style=flat-square" alt="NPM Downloads" /></a>
-  <a href="https://www.npmjs.com/package/@0xward/aetheros-core"><img src="https://img.shields.io/npm/l/@0xward/aetheros-core?style=flat-square" alt="License" /></a>
 </p>
 
 An enterprise-grade software development kit engineered to map decentralized identity relational graphs and manage network intelligence tasks directly linked to Clarity smart contracts on the Stacks blockchain.
