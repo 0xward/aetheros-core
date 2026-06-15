@@ -31,7 +31,7 @@ class AetherOS {
         this.network    = NETWORK_CONFIGS[net];
         this.netName    = net;
         this.mode       = config.mode || "standard";
-        this.version    = "1.1.7";
+        this.version    = "1.1.4";
         this._validateMode();
     }
 
