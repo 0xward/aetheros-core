@@ -2,10 +2,7 @@
 // Elite network intelligence platform on Stacks (Bitcoin L2)
 // Groq-powered AI analysis bound to Clarity smart contract state
 
-const STACKS_API_URL  = Buffer.from('aHR0cHM6Ly9hcGkuaGlyby5zbw==', 'base64').toString('utf8');
 const NETWORK_CONFIGS = {
-    mainnet: { api: Buffer.from('aHR0cHM6Ly9hcGkuaGlyby5zbw==', 'base64').toString('utf8'),          chain: "Stacks Mainnet", chainId: 1 },
-    testnet: { api: Buffer.from('aHR0cHM6Ly9hcGkudGVzdG5ldC5oaXJvLnNv', 'base64').toString('utf8'),  chain: "Stacks Testnet", chainId: 2147483648 },
 };
 
 const INTELLIGENCE_MODES = {
@@ -34,7 +31,7 @@ class AetherOS {
         this.network    = NETWORK_CONFIGS[net];
         this.netName    = net;
         this.mode       = config.mode || "standard";
-        this.version    = "1.0.7";
+        this.version    = "1.1.7";
         this._validateMode();
     }
 
