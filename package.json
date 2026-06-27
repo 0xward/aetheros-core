@@ -1,6 +1,6 @@
 {
   "name": "@0xward/aetheros-core",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Network intelligence SDK for the Stacks blockchain (Bitcoin L2) — fetches live Clarity contract state and network health from the Hiro API, with optional Groq-powered analysis.",
   "main": "index.js",
   "engines": {
