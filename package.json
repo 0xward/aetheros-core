@@ -1,12 +1,22 @@
 {
   "name": "@0xward/aetheros-core",
-  "version": "1.1.4",
-  "description": "Elite network intelligence platform designed on the Stacks blockchain using Groq + Bitcoin security.",
+  "version": "1.1.5",
+  "description": "Network intelligence SDK for the Stacks blockchain (Bitcoin L2) — fetches live Clarity contract state and network health from the Hiro API, with optional Groq-powered analysis.",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": [
     "0xward",
     "web3",
-    "utility"
+    "utility",
+    "stacks",
+    "clarity",
+    "bitcoin",
+    "bitcoin-l2",
+    "blockchain",
+    "groq",
+    "sdk"
   ],
   "author": "0xward",
   "license": "MIT",
