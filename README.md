@@ -9,41 +9,33 @@
   <a href="https://www.npmjs.com/package/@0xward/aetheros-core"><img src="https://img.shields.io/npm/l/@0xward/aetheros-core?style=flat-square" alt="License" /></a>
 </p>
 
-An enterprise-grade software development kit engineered to map decentralized identity relational graphs and manage network intelligence tasks directly linked to Clarity smart contracts on the Stacks blockchain.
+A lightweight SDK for reading live state from the Stacks blockchain (Bitcoin L2) — network health and Clarity contract interfaces straight from the Hiro API — with an optional Groq-powered analysis layer on top.
+
+Built for and used by [AetherOS](https://github.com/0xward/AetherOS).
 
 ---
 
 ## Installation
 
 ### Prerequisites
-- Node.js >= 18.0.0
-- npm >= 9.0.0 (or yarn >= 1.22.0 / pnpm >= 8.0.0)
+- Node.js >= 18.0.0 (uses the built-in `fetch`)
 
 ### Package Deployment
-Execute the targeted acquisition command matching your production environment package manager setup:
-
 ```bash
-# Using Node Package Manager (Default)
 npm install @0xward/aetheros-core
-
-# Using Yarn Package Manager
+# or
 yarn add @0xward/aetheros-core
-
-# Using PNPM Package Manager
+# or
 pnpm add @0xward/aetheros-core
 ```
-
-### Peer Dependencies
-For secure runtime cryptographic executions and ledger state mutations, ensure your runtime container establishes communication boundaries with the primary network bindings if processing on-chain blocks:
-- For Stacks L2 layers: @stacks/transactions (>= 6.x) and @stacks/network for secure Clarity function calling.
 
 ---
 
 ## Core Capabilities
 
-* **Bitcoin Anchor Verification:** Features programmatic verification tools to check Stacks transaction anchorage status on the Bitcoin L1 baseline.
-* **Clarity Contract Bindings:** Built-in compiler-ready data encoding structures conforming to Clarity 4.0 execution layer requirements.
-* **Compute Guard Protocols:** Hardened payload formatting to safely transmit queries to specialized computational environments.
+* **Live Network Health:** Pulls current Stacks block height and Bitcoin burn height straight from the Hiro API.
+* **Clarity Contract Lookups:** Checks whether a given `SP…`/`ST…` contract is deployed and returns its public interface.
+* **Groq-Powered Analysis:** Optional natural-language queries about network/contract context, answered via Groq.
 
 ---
 
@@ -51,11 +43,18 @@ For secure runtime cryptographic executions and ledger state mutations, ensure y
 
 ```javascript
 const { AetherOS } = require("@0xward/aetheros-core");
-const node = new AetherOS("credentials_token_hash");
+
+const node = new AetherOS({
+  apiKey: process.env.GROQ_API_KEY,
+  network: "mainnet", // or "testnet"
+});
 
 async function execute() {
-    const analysis = await node.queryIntelligence("Verify L2 block integrity parameters");
-    console.log("Analysis Output:", analysis);
+  const health = await node.getNetworkHealth();
+  console.log("Network health:", health);
+
+  const analysis = await node.queryIntelligence("Verify L2 block integrity parameters");
+  console.log("Analysis Output:", analysis);
 }
 execute();
 ```
@@ -68,8 +67,12 @@ execute();
 
 | Method | Parameters | Return Type | Description |
 | :--- | :--- | :--- | :--- |
-| `queryIntelligence` | `prompt: string` | `Promise<Object>` | Submits validation requests to the intelligence interface. |
-| `verifyOnChainState` | `txId: string` | `Promise<Object>` | Tracks block hash states to cross-verify Bitcoin confirmation indices. |
+| `queryIntelligence` | `prompt: string` | `Promise<Object>` | Sends `prompt` to Groq along with network context and returns the model's answer. |
+| `getContractState` | `contractId: string` | `Promise<Object>` | Fetches a Clarity contract's interface from the Hiro API. |
+| `getNetworkHealth` | — | `Promise<Object>` | Fetches current Stacks block height and Bitcoin burn height. |
+| `setMode` | `mode: string` | `AetherOS` | Switches analysis depth: `standard`, `deep`, or `forensic`. |
+| `getIntelligenceModes` | — | `Array<Object>` | Lists available analysis modes. |
+| `getVersion` | — | `string` | Returns the current SDK version. |
 
 ---
 
